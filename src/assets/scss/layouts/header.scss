@@ -1,0 +1,39 @@
+.header{
+	height: 78px;
+	padding: 42px 0 0;
+	text-align: right;
+
+	&__phone{
+		display: inline-flex;
+		align-items: center;
+		@include font(normal, bold, 2.2rem, 1.2, $color-orange);
+		text-decoration: none;
+		transition: all 0.2s ease 0s;
+
+		.icon{
+			flex-shrink: 0;
+			fill: $color-orange;
+			margin-right: 16px;
+			transition: fill 0.2s ease 0s;
+		}
+	}
+
+	&__phone:hover{
+		color: $color-green;
+		.icon{fill: $color-green;}
+	}
+}
+
+@media (max-width: 767px) {
+	.header{
+		height: 42px;
+		padding: 18px 0 0;
+
+		&__phone{
+			font-size: 1.6rem;
+			.icon{margin-right: 12px;}
+		}
+	}
+
+	h1, .h1{font-size: 3rem;}
+}

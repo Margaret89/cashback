@@ -1,0 +1,46 @@
+extends ../layout/main
+
+block content
+	section.offer
+		.st-width
+			.offer__content
+				h1.offer__title Кэшбек
+
+				.num-design
+					.num-design__shadow 10%
+					.num-design__text 10%
+
+				.offer__text
+					|в день заказа
+					br
+					|<b>прорабам</b> и <b>бригадирам</b>
+
+				.offer__label
+					+svg('ic-star','ic-star', '18', '19')
+					|При заказе в строительных торговых сетях
+
+				.offer__btn
+					a.btn(href='#')
+						span Оставить заявку
+
+	section.partners
+		.st-width
+			.partners__content
+				.partners__title Наши партнеры
+
+				.partners__list
+					.partners__item
+						a(href="#")
+							img(src="assets/img/partner1.png", alt="")
+
+					.partners__item
+						a(href="#")
+							img(src="assets/img/partner2.png", alt="")
+
+					.partners__item
+						a(href="#")
+							img(src="assets/img/partner3.png", alt="")
+						
+					.partners__item
+						a(href="#")
+							img(src="assets/img/partner4.png", alt="")

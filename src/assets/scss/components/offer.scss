@@ -1,0 +1,139 @@
+/*-------------- offer -----------------*/
+.offer{
+	height: calc(100vh - 320px);
+	background: 
+		url(../img/bg-tools.png) no-repeat bottom center,
+		url(../img/nut.png) no-repeat 67.5% 10%,
+		url(../img/pin.png) no-repeat 76% 57%;
+
+	&__content{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		padding-bottom: 70px;
+	}
+
+	&__title{
+		width: 100%;
+		@include font(normal, bold, 5.2rem, 1.3, $color-text);
+		margin-bottom: 15px;
+	}
+
+	.num-design,
+	&__label{
+		width: 39%;
+		margin-right: 24px;
+	}
+
+	&__text{
+		@include font(normal, normal, 4rem, 1.4, $color-text);
+	}
+
+	&__label{
+		display: flex;
+		@include font(normal, normal, 2.2rem, 1.6, $color-text);
+		position: relative;
+		margin-top: 25px;
+
+		.icon{
+			flex-shrink: 0;
+			fill: $color-orange;
+			margin-right: 16px;
+		}
+	}
+
+	&__btn{
+		width: 100%;
+		margin-top: 45px;
+	}
+}
+
+.num-design{
+	@include font(normal, bold, 20.5rem, 1, $color-green);
+	position: relative;
+
+	&__shadow{
+		color: #fff;
+		text-shadow: -1px 0 $color-green, 0 1px $color-green, 1px 0 $color-green, 0 -1px $color-green;
+		position: absolute;
+		top: 6px;
+		left: 6px;
+	}
+
+	&__text{position: relative;}
+}
+
+@media (max-height: 880px) {
+	.offer{
+		height: calc(100vh - 290px);
+		
+		&__label{
+			width: 100%;
+			margin-top: 0;
+		}
+
+		&__btn{margin-top: 15px;}
+	}
+
+	.num-design{font-size: 20.5rem;}
+}
+
+@media (max-width: 1279px) {
+	.num-design{font-size: 19vw;}
+
+	.offer{
+		&__text{font-size: 4vw;}
+		&__label{font-size: 2.3vw;}
+	}
+}
+
+@media (max-width: 767px) {
+	.offer{
+		height: calc(100vh - 302px);
+		background:
+			url(../img/bg-tools-mobile.png) no-repeat right bottom,
+			url(../img/nut.png) no-repeat 62% 1%,
+			url(../img/pin.png) no-repeat 93% 33%;
+
+		background-size: auto, 54px, 80px;
+
+		&__content{
+			display: block;
+			padding-top: 10px;
+		}
+
+		&__title{
+			font-size: 3rem;
+			margin-bottom: 3px;
+		}
+
+		.num-design,
+		&__label{
+			width: auto;
+			margin-right: 0;
+		}
+
+		&__text{
+			font-size: 2.2rem;
+			margin-top: 12px;
+		}
+
+		&__label{
+			font-size: 1.8rem;
+			line-height: 1.4;
+
+			.icon{max-width: 12px;}
+		}
+
+		&__btn{margin-top: 25px;}
+	}
+
+	.num-design{
+		font-size: 12.5rem;
+
+		&__shadow{
+			top: 3px;
+			left: 3px;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.footer{
+	height: 60px;
+	background: #222;
+	@include font(normal, normal, 1.4rem, 1.2, #bebebe);
+	text-align: center;
+	padding: 21px 0;
+}
+
+@media (max-width: 767px) {
+	.footer{
+		height: 50px;
+		padding: 17px 0;
+	}
+}

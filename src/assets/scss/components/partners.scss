@@ -1,0 +1,56 @@
+/*-------------- partners -----------------*/
+.partners{
+	min-height: 180px;
+	background: #fff;
+
+	&__content{
+		position: relative;
+		padding: 33px 0;
+	}
+
+	&__title{
+		display: inline-flex;
+		align-items: center;
+		background: #fff;
+		@include font(normal, bold, 2rem, 1.2, $color-text);
+		padding: 20px 40px 5px;
+		border-radius: 8px 8px 0 0;
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+	}
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	&__item{
+		max-width: calc(25% - 30px);
+		margin: 15px;
+	}
+}
+
+@media (max-height: 880px) {
+	.partners{
+		min-height: 150px;
+		&__content{padding: 18px 0;}
+	}
+}
+
+@media (max-width: 767px) {
+	.partners{
+		min-height: 203px;
+		&__title{font-size: 1.8rem;}
+		&__content{padding: 24px 0;}
+
+		&__item{
+			max-width: calc(50% - 80px);
+			margin: 15px 40px;
+		}
+	}
+}
